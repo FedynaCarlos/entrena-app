@@ -1,16 +1,53 @@
-# React + Vite
+# Gym App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación web desarrollada con React para la gestión de entrenamientos personalizados.
 
-Currently, two official plugins are available:
+## Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Crear una plataforma simple y escalable que permita a entrenadores administrar ejercicios, crear rutinas y asignarlas a sus alumnos.
 
-## React Compiler
+La primera versión está enfocada en validar la idea rápidamente con usuarios reales, priorizando la simplicidad y la experiencia de entrenamiento.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades (MVP)
 
-## Expanding the Oxlint configuration
+- Dashboard del alumno
+- Visualización del entrenamiento del día
+- Gestión de ejercicios
+- Creación de rutinas
+- Asignación de rutinas a alumnos
+- Arquitectura preparada para escalar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tecnologías
+
+- React
+- Vite
+- React Router
+- JavaScript
+- CSS
+
+## Estado del proyecto
+
+🚧 En desarrollo (Versión 1.0)
+
+## Roadmap
+
+### Versión 1.0
+- [ ] Dashboard
+- [ ] Workout
+- [ ] Gestión de ejercicios
+- [ ] Gestión de rutinas
+- [ ] Gestión de alumnos
+- [ ] Asignación de rutinas
+
+### Futuras versiones
+- Autenticación
+- Backend con Node.js y Express
+- Base de datos
+- Seguimiento del progreso
+- Pagos
+- Notificaciones
+- Estadísticas
+
+## Autor
+
+Juan Carlos Fedyna
