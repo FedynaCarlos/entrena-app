@@ -1,53 +1,147 @@
-# Gym App
+# 🏋️ Entrena App
 
 Aplicación web desarrollada con React para la gestión de entrenamientos personalizados.
 
-## Objetivo
+El objetivo del proyecto es ofrecer una plataforma simple, rápida y escalable donde los alumnos puedan consultar sus rutinas diarias y los entrenadores puedan administrar ejercicios, rutinas y estudiantes desde un único lugar.
 
-Crear una plataforma simple y escalable que permita a entrenadores administrar ejercicios, crear rutinas y asignarlas a sus alumnos.
+---
 
-La primera versión está enfocada en validar la idea rápidamente con usuarios reales, priorizando la simplicidad y la experiencia de entrenamiento.
+## 🚀 Estado del proyecto
 
-## Funcionalidades (MVP)
+🚧 En desarrollo (MVP)
 
-- Dashboard del alumno
-- Visualización del entrenamiento del día
-- Gestión de ejercicios
-- Creación de rutinas
-- Asignación de rutinas a alumnos
-- Arquitectura preparada para escalar
+Versión actual:
 
-## Tecnologías
+v0.2.0
+
+---
+
+## 🎯 Objetivos
+
+- Mostrar el entrenamiento del día.
+- Visualizar ejercicios asignados.
+- Gestionar rutinas.
+- Administrar alumnos.
+- Escalar hacia una plataforma completa de entrenamiento.
+
+---
+
+## 🛠️ Tecnologías
 
 - React
 - Vite
 - React Router
-- JavaScript
-- CSS
+- JavaScript (ES6+)
+- CSS3
 
-## Estado del proyecto
+---
 
-🚧 En desarrollo (Versión 1.0)
+## 📁 Arquitectura
 
-## Roadmap
+```
+src/
+│
+├── assets/
+├── components/
+│   ├── common/
+│   ├── dashboard/
+│   ├── exercises/
+│   ├── routines/
+│   └── students/
+│
+├── context/
+├── data/
+├── hooks/
+├── layout/
+├── pages/
+├── services/
+├── styles/
+└── utils/
+```
 
-### Versión 1.0
-- [ ] Dashboard
-- [ ] Workout
-- [ ] Gestión de ejercicios
-- [ ] Gestión de rutinas
-- [ ] Gestión de alumnos
-- [ ] Asignación de rutinas
+---
 
-### Futuras versiones
-- Autenticación
-- Backend con Node.js y Express
-- Base de datos
-- Seguimiento del progreso
-- Pagos
-- Notificaciones
-- Estadísticas
+## ✨ Funcionalidades implementadas
 
-## Autor
+- ✅ Dashboard del alumno.
+- ✅ Workout Card.
+- ✅ Navegación entre pantallas.
+- ✅ Lista de ejercicios mediante componentes reutilizables.
+- ✅ Arquitectura escalable.
+
+---
+
+## 📅 Roadmap
+
+### Sprint 1
+
+- Infraestructura del proyecto.
+- Configuración de React + Vite.
+- Arquitectura inicial.
+- Documentación.
+
+### Sprint 2
+
+- Dashboard del alumno.
+- Workout Card.
+- Visualización de ejercicios.
+
+### Próximamente
+
+- Panel de administración.
+- Gestión de rutinas.
+- Gestión de alumnos.
+- Autenticación.
+- Base de datos.
+- API REST.
+- Mercado Pago.
+- Estadísticas de progreso.
+
+---
+
+## 📚 Documentación
+
+El proyecto incluye documentación técnica:
+
+- PROJECT_MANIFEST.md
+- ROADMAP.md
+- CONVENTIONS.md
+- DECISIONS.md
+- CHANGELOG.md
+
+---
+
+## 💡 Filosofía del proyecto
+
+Entrena App prioriza:
+
+- Simplicidad.
+- Escalabilidad.
+- Código limpio.
+- Componentes reutilizables.
+- Desarrollo incremental mediante Sprints.
+
+El objetivo es validar el producto rápidamente antes de incorporar funcionalidades más complejas.
+
+---
+
+## 👨‍💻 Autor
 
 Juan Carlos Fedyna
+
+Desarrollador Web Full Stack
+
+GitHub
+
+https://github.com/FedynaCarlos
+
+LinkedIn
+
+linkedin.com/in/juancarlosfedyna
+
+---
+
+## 📄 Licencia
+
+Proyecto privado.
+Todos los derechos reservados.

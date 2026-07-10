@@ -1,13 +1,17 @@
+import exercises from "../../data/exercises";
+import ExerciseCard from "../../components/exercises/ExerciseCard/ExerciseCard";
+
 function Workout() {
   return (
     <main>
-      <h1>Entrenamiento</h1>
+      <h1>Entrenamiento de hoy</h1>
 
-      <h2>Piernas + Core</h2>
-
-      <p>Ejercicio 1 de 7</p>
-
-      <button>Comenzar ejercicio</button>
+      {exercises.map((exercise) => (
+        <ExerciseCard
+          key={exercise.id}
+          exercise={exercise}
+        />
+      ))}
     </main>
   );
 }

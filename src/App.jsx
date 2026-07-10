@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./layout/MainLayout";
 
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 import Workout from "./pages/Workout/Workout";
 import Admin from "./pages/Admin/Admin";
 import Exercises from "./pages/Exercises/Exercises";

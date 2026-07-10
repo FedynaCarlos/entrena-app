@@ -1,8 +1,14 @@
 # CONVENTIONS
 
-## Objetivo
+# Entrena App
 
-Este documento define las reglas de desarrollo de Entrena App.
+Versión: 1.0
+
+---
+
+# Objetivo
+
+Este documento define las reglas de desarrollo del proyecto.
 
 Todas las nuevas funcionalidades deben respetar estas convenciones.
 
@@ -12,10 +18,10 @@ Todas las nuevas funcionalidades deben respetar estas convenciones.
 
 Siempre priorizar:
 
-- simplicidad
-- legibilidad
-- mantenibilidad
-- escalabilidad
+- Simplicidad.
+- Legibilidad.
+- Mantenibilidad.
+- Escalabilidad.
 
 Evitar soluciones complejas si una solución simple resuelve el problema.
 
@@ -23,46 +29,82 @@ Evitar soluciones complejas si una solución simple resuelve el problema.
 
 # Arquitectura
 
-La aplicación está organizada por responsabilidades.
-
 ```
 src/
-
-assets/
-components/
-context/
-data/
-hooks/
-layout/
-pages/
-services/
-styles/
-utils/
+│
+├── assets/
+├── components/
+├── context/
+├── data/
+├── hooks/
+├── layout/
+├── pages/
+├── services/
+├── styles/
+└── utils/
 ```
 
 ---
 
-# Componentes
+# Organización de Componentes
 
-Cada componente tendrá su propia carpeta.
+## Regla
+
+**Todo componente tendrá su propia carpeta.**
+
+Ejemplo:
+
+```
+components/
+
+dashboard/
+    WorkoutCard/
+        WorkoutCard.jsx
+        WorkoutCard.css
+
+exercises/
+    ExerciseCard/
+        ExerciseCard.jsx
+        ExerciseCard.css
+
+routines/
+    RoutineCard/
+        RoutineCard.jsx
+        RoutineCard.css
+```
+
+No crear componentes directamente dentro de una carpeta.
+
+❌ Incorrecto
+
+```
+components/
+    exercises/
+        ExerciseCard.jsx
+```
+
+✅ Correcto
+
+```
+components/
+    exercises/
+        ExerciseCard/
+            ExerciseCard.jsx
+            ExerciseCard.css
+```
+
+---
+
+# Imports
+
+Los imports siempre apuntarán al componente dentro de su carpeta.
 
 Ejemplo
 
-```
-WorkoutCard/
+```jsx
+import WorkoutCard from "../../components/dashboard/WorkoutCard/WorkoutCard";
 
-WorkoutCard.jsx
-```
-
-Más adelante podrá contener
-
-```
-WorkoutCard/
-
-WorkoutCard.jsx
-WorkoutCard.css
-WorkoutCard.test.jsx
-index.js
+import ExerciseCard from "../../components/exercises/ExerciseCard/ExerciseCard";
 ```
 
 ---
@@ -71,12 +113,13 @@ index.js
 
 ## Carpetas técnicas
 
-Siempre minúsculas
+Siempre minúsculas.
 
 ```
 assets
 components
 context
+data
 hooks
 layout
 pages
@@ -89,7 +132,7 @@ utils
 
 ## Componentes
 
-Siempre PascalCase
+Siempre PascalCase.
 
 ```
 WorkoutCard
@@ -105,7 +148,7 @@ Modal
 
 ## Pages
 
-Siempre PascalCase
+Siempre PascalCase.
 
 ```
 Dashboard
@@ -116,17 +159,27 @@ Routines
 Students
 ```
 
+Cada página tendrá su propia carpeta.
+
+```
+pages/
+
+Dashboard/
+    Dashboard.jsx
+
+Workout/
+    Workout.jsx
+```
+
 ---
 
 ## Hooks
 
-Siempre camelCase
+Siempre camelCase.
 
 ```
 useWorkout.js
-
 useStudents.js
-
 useExercises.js
 ```
 
@@ -134,11 +187,10 @@ useExercises.js
 
 ## Utilidades
 
-Siempre camelCase
+Siempre camelCase.
 
 ```
 formatTime.js
-
 calculateProgress.js
 ```
 
@@ -146,13 +198,12 @@ calculateProgress.js
 
 ## Data
 
-Siempre minúsculas
+Archivos en minúsculas.
 
 ```
+workout.js
 exercises.js
-
 students.js
-
 routines.js
 ```
 
@@ -160,15 +211,23 @@ routines.js
 
 # CSS
 
-Cada componente tendrá su propio archivo CSS cuando sea necesario.
+Cada componente tendrá su propio archivo CSS.
 
-No crear CSS global innecesario.
+Ejemplo
+
+```
+WorkoutCard/
+    WorkoutCard.jsx
+    WorkoutCard.css
+```
+
+No utilizar CSS global salvo para estilos generales de la aplicación.
 
 ---
 
-# Componentes
+# Responsabilidad
 
-Un componente = una responsabilidad.
+Cada componente debe tener una única responsabilidad.
 
 Ejemplo
 
@@ -176,11 +235,11 @@ WorkoutCard
 
 Responsabilidad:
 
-Mostrar el entrenamiento del día.
+- Mostrar el entrenamiento del día.
 
 No debe contener lógica de alumnos.
 
-No debe contener lógica de administración.
+No debe contener lógica del panel administrador.
 
 ---
 
@@ -188,21 +247,20 @@ No debe contener lógica de administración.
 
 Una página organiza componentes.
 
-No debe contener demasiada lógica.
+No debe contener lógica compleja.
 
 ---
 
 # Estado
 
-Primero:
+Orden de prioridad:
 
-props
+1. Props
+2. useState
+3. Context API
+4. Backend
 
-Luego:
-
-Context API
-
-Redux solamente si realmente es necesario.
+No utilizar Redux hasta que realmente sea necesario.
 
 ---
 
@@ -225,20 +283,56 @@ Ejemplos
 ```
 feat: add workout card
 
-fix: correct navigation bug
+fix: correct workout navigation
 
 docs: update roadmap
 
-style: improve dashboard spacing
+style: improve dashboard layout
 
-refactor: simplify layout
+refactor: simplify exercise card
 ```
+
+---
+
+# Flujo de desarrollo
+
+Cada funcionalidad seguirá este proceso:
+
+```
+Idea
+
+↓
+
+Diseño
+
+↓
+
+Componente
+
+↓
+
+Página
+
+↓
+
+Prueba
+
+↓
+
+Commit
+
+↓
+
+Push
+```
+
+No saltear pasos.
 
 ---
 
 # Regla principal
 
-Nunca crear componentes que todavía no estén siendo utilizados.
+Nunca crear componentes que todavía no sean utilizados.
 
 Nunca crear funcionalidades por anticipado.
 
@@ -246,16 +340,12 @@ Construir únicamente lo necesario para el Sprint actual.
 
 ---
 
-# Calidad
+# Checklist antes de un Commit
 
-Antes de hacer un commit verificar:
-
-✔ El proyecto compila.
-
-✔ No existen errores.
-
-✔ La funcionalidad funciona.
-
-✔ El código es legible.
-
-✔ El componente tiene una única responsabilidad.
+- El proyecto compila.
+- No existen errores.
+- La funcionalidad funciona.
+- El componente tiene una única responsabilidad.
+- El código es legible.
+- Los imports son correctos.
+- La estructura respeta las convenciones del proyecto.

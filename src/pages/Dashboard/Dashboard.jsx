@@ -1,12 +1,12 @@
+import Greeting from "../../components/dashboard/Greeting/Greeting";
 import WorkoutCard from "../../components/dashboard/WorkoutCard/WorkoutCard";
 
 function Dashboard() {
   return (
-    <>
-      <h1>Hola Juan Carlos 👋</h1>
-
+    <main>
+      <Greeting />
       <WorkoutCard />
-    </>
+    </main>
   );
 }
 
