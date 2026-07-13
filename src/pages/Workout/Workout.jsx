@@ -3,7 +3,7 @@ import ExerciseCard from "../../components/exercises/ExerciseCard/ExerciseCard";
 
 function Workout() {
   return (
-    <main>
+    <main className="workout-page">
       <h1>Entrenamiento de hoy</h1>
 
       {exercises.map((exercise) => (

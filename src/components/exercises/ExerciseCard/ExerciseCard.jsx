@@ -5,17 +5,17 @@ function ExerciseCard({ exercise }) {
     <article className="exercise-card">
       <h2>{exercise.name}</h2>
 
-      <p>
-        <strong>Series:</strong> {exercise.sets}
-      </p>
+      <div className="exercise-info">
+        <p>🏋️ Series: {exercise.sets}</p>
 
-      <p>
-        <strong>Repeticiones:</strong> {exercise.reps}
-      </p>
+        <p>🔁 Repeticiones: {exercise.reps}</p>
 
-      <p>
-        <strong>Descanso:</strong> {exercise.rest}
-      </p>
+        <p>⏱ Descanso: {exercise.rest}</p>
+      </div>
+
+      <button className="exercise-button">
+        ▶ Comenzar ejercicio
+      </button>
     </article>
   );
 }
