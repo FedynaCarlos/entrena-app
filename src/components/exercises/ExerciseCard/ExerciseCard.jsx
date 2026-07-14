@@ -1,8 +1,10 @@
 import "./ExerciseCard.css";
-
+import { useState } from "react";
+import "./ExerciseCard.css";
 function ExerciseCard({ exercise }) {
+  const [completed, setCompleted] = useState(false);
   return (
-    <article className="exercise-card">
+    <article className={completed ? "exercise-card completed" : "exercise-card"}>
       <h2>{exercise.name}</h2>
 
       <div className="exercise-info">
@@ -13,8 +15,11 @@ function ExerciseCard({ exercise }) {
         <p>⏱ Descanso: {exercise.rest}</p>
       </div>
 
-      <button className="exercise-button">
-        ▶ Comenzar ejercicio
+      <button
+        className="exercise-button"
+        onClick={() => setCompleted(!completed)}
+      >
+        {completed ? "✅ Completado" : "▶ Comenzar ejercicio"}
       </button>
     </article>
   );
