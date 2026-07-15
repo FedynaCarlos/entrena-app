@@ -1,0 +1,30 @@
+:root {
+
+    /* Colores */
+
+    --color-primary: #2563EB;
+    --color-primary-dark: #1D4ED8;
+
+    --color-success: #22C55E;
+
+    --color-background: #F8FAFC;
+
+    --color-card: #FFFFFF;
+
+    --color-text: #1F2937;
+
+    --color-text-light: #6B7280;
+
+    --color-border: #E5E7EB;
+
+    /* Bordes */
+
+    --radius: 16px;
+
+    /* Sombras */
+
+    --shadow:
+
+        0 10px 25px rgba(0, 0, 0, .08);
+
+}
