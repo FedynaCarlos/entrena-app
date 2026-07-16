@@ -8,13 +8,14 @@ import Admin from "./pages/Admin/Admin";
 import Exercises from "./pages/Exercises/Exercises";
 import Routines from "./pages/Routines/Routines";
 import Students from "./pages/Students/Students";
-
+import Home from "./pages/Home/Home";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/workout" element={<Workout />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/exercises" element={<Exercises />} />
